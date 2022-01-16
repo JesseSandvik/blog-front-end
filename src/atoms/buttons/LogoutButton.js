@@ -1,10 +1,15 @@
 import { useDispatch } from "react-redux";
 import { logout } from "../../features/user";
 
-const LogoutButton = () => {
+const LogoutButton = ({ setIsLoggedIn }) => {
     const dispatch = useDispatch();
 
-    return <button onClick={() => dispatch(logout())}>Logout</button>
+    const logoutHandler = () => {
+        dispatch(logout());
+        setIsLoggedIn(false);
+    }
+
+    return <button onClick={logoutHandler}>Logout</button>
 }
 
 export default LogoutButton;
