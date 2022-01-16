@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import HOneTag from "./atoms/Htags/HOneTag";
+import LoginButton from "./atoms/buttons/LoginButton";
+import LogoutButton from "./atoms/buttons/LogoutButton";
+import MainPageBody from "./organisms/MainPageBody";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HOneTag inputText={"Blog Page"}/>
+      <MainPageBody />
+      <LoginButton />
+      <LogoutButton />
     </div>
   );
 }
